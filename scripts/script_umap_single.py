@@ -21,6 +21,9 @@ data_options = {
 }
 
 model_options = {
+    # RNG seed
+    "random_state": 69,
+    # Hyperparameters
     "n_neighbors": 10,
     "min_dist": 0.05,
     "n_components": 2,
@@ -109,6 +112,7 @@ label_palette_map = {
 
 # UMAP
 reducer = umap.UMAP(
+    random_state=model_options["random_state"],
     n_neighbors=model_options["n_neighbors"],
     min_dist=model_options["min_dist"],
     n_components=model_options["n_components"],
