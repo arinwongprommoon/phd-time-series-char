@@ -6,7 +6,42 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import umap
 
-f = pd.read_csv("../data/processed/features_scaled.csv", index_col=[0, 1, 2])
+features_scaled = pd.read_csv(
+    "../data/processed/features_scaled.csv", index_col=[0, 1, 2]
+)
+labels_df = pd.read_csv("../data/processed/labels_df.csv", index_col=[0, 1, 2])
+
+position_list = features_scaled.index.get_level_values("position").to_list()
+strain_list = [position.split("_")[0] for position in position_list]
+strain_relabel_lookup = {
+    "tsa1tsa2morgan": "tsa1Δ tsa2Δ",
+    "by4742swain": "BY4742",
+}
+strain_list = [strain_relabel_lookup.get(item, item) for item in strain_list]
+
+common_idx = features_scaled.index.intersection(labels_df.index)
+scores_list = labels_df.loc[common_idx].score.to_list()
+scores_relabel_lookup = {
+    0: "Oscillatory",
+    1: "Non-oscillatory",
+}
+scores_list = [scores_relabel_lookup.get(item, item) for item in scores_list]
+
+label_list = []
+for strain, score in zip(strain_list, scores_list):
+    if score == "Non-oscillatory":
+        label_list.append(score)
+    elif score == "Oscillatory":
+        label_list.append(strain)
+
+breakpoint()
+
+label_palette_map = {
+    "Non-oscillatory": "lightgrey",
+    "tsa1Δ tsa2Δ": "C0",
+    "BY4742": "C1",
+}
+
 
 d = {
     "n_neighbors": [5, 10],
@@ -39,6 +74,8 @@ def umap_grid(hyperparam_dict, features_scaled):
 def plot_umap_grid(
     hyperparam_dict,
     embedding_array,
+    hue=None,
+    palette=None,
     xlabel=None,
     ylabel=None,
 ):
@@ -101,8 +138,9 @@ def plot_umap_grid(
                     sns.scatterplot(
                         x=embedding[:, 0],
                         y=embedding[:, 1],
-                        # hue=scores_list,
-                        # palette=scores_palette_map,
+                        hue=hue,
+                        palette=palette,
+                        legend=False,
                         ax=ax[row_idx, col_idx],
                     )
 
@@ -122,8 +160,13 @@ def plot_umap_grid(
     # fig.subplots_adjust(right=0.75)
 
 
-e = umap_grid(d, f)
-plot_umap_grid(d, e)
+e = umap_grid(d, features_scaled)
+plot_umap_grid(
+    hyperparam_dict=d,
+    embedding_array=e,
+    hue=label_list,
+    palette=label_palette_map,
+)
 
 breakpoint()
 
