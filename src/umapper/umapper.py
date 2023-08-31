@@ -1,69 +1,27 @@
 #!/usr/bin/env python3
 
-"""UMAP-related wrappers"""
-
-import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
+import matplotlib.pyplot as plt
 import umap
-from postprocessor.core.processes.standardscaler import standardscaler
-from postprocessor.core.processes.umapembedding import (
-    umapembedding,
-    umapembeddingParameters,
-)
-from src.utils.utils import generate_palette_map
 
 
-class _UMAPEmbeddingPlotter:
-    """Draw scatterplot of UMAP embedding"""
+def umap_grid(hyperparam_dict, features_scaled, random_state=69):
+    n_neighbors_list = hyperparam_dict["n_neighbors"]
+    min_dist_list = hyperparam_dict["min_dist"]
+    x_dim = len(n_neighbors_list)
+    y_dim = len(min_dist_list)
+    embedding_array = np.zeros(shape=(x_dim, y_dim), dtype="object")
 
-    def __init__(self, embedding, labels, palette_map):
-        self.embedding = embedding
-        self.labels = labels
-        self.palette_map = palette_map
+    for x_index, n_neighbors in enumerate(n_neighbors_list):
+        for y_index, min_dist in enumerate(min_dist_list):
+            reducer = umap.UMAP(
+                random_state=random_state,
+                n_neighbors=n_neighbors,
+                min_dist=min_dist,
+                n_components=2,
+            )
+            mapper = reducer.fit(features_scaled)
+            embedding = mapper.embedding_
+            embedding_array[x_index, y_index] = embedding
 
-    def plot(self, ax):
-        """Draw scatterplot on the provided Axes."""
-        sns.scatterplot(
-            x=self.embedding[:, 0],
-            y=self.embedding[:, 1],
-            hue=self.labels,
-            palette=self.palette_map,
-            ax=ax,
-        )
-
-
-def umap_embedding_plot(embedding, labels, palette_map, ax=None):
-    """Plot UMAP embedding"""
-    plotter = _UMAPEmbeddingPlotter(embedding, labels, palette_map)
-    if ax is None:
-        ax = plt.gca()
-    plotter.plot(ax)
-    return ax
-
-
-# Wrapper for them all, with all the parameters, default for my most common
-# use case
-def umap_plot(
-    data, n_neighbors, min_dist, n_components, scale=True, label_index="strain", ax=None
-):
-    """Compute embedding and draw UMAP"""
-    params = umapembeddingParameters(
-        n_neighbors=n_neighbors, min_dist=min_dist, n_components=n_components
-    )
-
-    runner = umapembedding(params)
-    if scale:
-        data_scaled = standardscaler.as_function(data.T).T
-    else:
-        data_scaled = data
-
-    plotter = _UMAPEmbeddingPlotter(
-        embedding=runner.run(data_scaled),
-        labels=data.index.get_level_values(label_index),
-        palette_map=generate_palette_map(data),
-    )
-    if ax is None:
-        ax = plt.gca()
-    plotter.plot(ax)
-    return ax
+    return embedding_array
