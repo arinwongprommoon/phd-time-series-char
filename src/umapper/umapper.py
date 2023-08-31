@@ -11,7 +11,7 @@ from postprocessor.core.processes.umapembedding import (
     umapembedding,
     umapembeddingParameters,
 )
-from utils import generate_palette_map
+from src.utils.utils import generate_palette_map
 
 
 class _UMAPEmbeddingPlotter:
