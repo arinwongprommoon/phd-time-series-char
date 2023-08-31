@@ -102,11 +102,11 @@ def plot_umap_grid(
         if row_idx == len(global_yaxislabels) - 1:
             pass
         else:
-            # Print exch rate label
+            # Print min_dist label
             ax[row_idx, 0].text(
                 x=0.5,
                 y=0.5,
-                s=f"{global_yaxislabel:.3f}",
+                s=f"{global_yaxislabel:.2f}",
                 ha="center",
                 va="center",
             )
@@ -118,11 +118,11 @@ def plot_umap_grid(
                 if col_idx == 0:
                     pass
                 else:
-                    # Print hyperparam label
+                    # Print n_neghbors label
                     ax[row_idx, col_idx].text(
                         x=0.5,
                         y=0.5,
-                        s=f"{global_xaxislabel:.3f}",
+                        s=f"{global_xaxislabel:.0f}",
                         ha="center",
                         va="center",
                     )
