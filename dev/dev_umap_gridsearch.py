@@ -84,7 +84,7 @@ def plot_umap_grid(
     # Have exch_rate values in an extra column & row
     nrows += 1
     ncols += 1
-    fig, ax = plt.subplots(nrows, ncols)
+    fig, ax = plt.subplots(nrows=nrows, ncols=ncols, figsize=(10, 10))
 
     # Define axis labels
     global_xaxislabels = list(hyperparam_dict.values())[0]
