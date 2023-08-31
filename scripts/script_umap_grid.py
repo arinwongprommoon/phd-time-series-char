@@ -9,8 +9,8 @@ from src.umapper.umapper import umap_grid
 from src.viz.grid import plot_umap_grid
 
 hyperparam_dict = {
-    "n_neighbors": [5, 10],
-    "min_dist": [0.25, 0.5],
+    "n_neighbors": [5, 10, 20, 50, 100, 150],
+    "min_dist": [0.0, 0.25, 0.5, 1.0],
 }
 
 
