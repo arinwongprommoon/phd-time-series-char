@@ -34,7 +34,6 @@ for strain, score in zip(strain_list, scores_list):
     elif score == "Oscillatory":
         label_list.append(strain)
 
-breakpoint()
 
 label_palette_map = {
     "Non-oscillatory": "lightgrey",
@@ -143,6 +142,8 @@ def plot_umap_grid(
                         legend=False,
                         ax=ax[row_idx, col_idx],
                     )
+                    ax[row_idx, col_idx].get_xaxis().set_ticks([])
+                    ax[row_idx, col_idx].get_yaxis().set_ticks([])
 
     # For global axis labels: create a big subplot and hide everything except
     # for the labels
