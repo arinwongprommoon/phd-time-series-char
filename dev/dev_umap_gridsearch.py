@@ -103,7 +103,7 @@ def plot_umap_grid(
                         y=embedding[:, 1],
                         # hue=scores_list,
                         # palette=scores_palette_map,
-                        ax=[row_idx, col_idx],
+                        ax=ax[row_idx, col_idx],
                     )
 
     # For global axis labels: create a big subplot and hide everything except
@@ -124,3 +124,7 @@ def plot_umap_grid(
 
 e = umap_grid(d, f)
 plot_umap_grid(d, e)
+
+breakpoint()
+
+print("foo")
