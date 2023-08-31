@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -90,8 +90,8 @@ scores_relabel_lookup = {
 }
 scores_list = [scores_relabel_lookup.get(item, item) for item in scores_list]
 scores_palette_map = {
-    "Oscillatory": "C2",
-    "Non-oscillatory": "C4",
+    "Oscillatory": "k",
+    "Non-oscillatory": "lightgrey",
 }
 ## Combined
 label_list = []
