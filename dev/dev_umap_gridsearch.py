@@ -137,6 +137,7 @@ def plot_umap_grid(
                     sns.scatterplot(
                         x=embedding[:, 0],
                         y=embedding[:, 1],
+                        s=5,
                         hue=hue,
                         palette=palette,
                         legend=False,
