@@ -9,11 +9,37 @@ from matplotlib.backends.backend_pdf import PdfPages
 from postprocessor.core.processes.catch22 import catch22
 from postprocessor.core.processes.standardscaler import standardscaler
 
+data_options = {
+    # Experiment ID.
+    # Prefix 'is' for islay or 'st' for staffa.
+    # ID is 5 digits, add leading zeros as appropriate.
+    "experimentID": "st01253",
+    # Group (strain) ID for first group
+    "group1": "tsa1tsa2morgan",
+    # second group
+    "group2": "by4742swain",
+}
+
+model_options = {
+    "n_neighbors": 10,
+    "min_dist": 0.05,
+    "n_components": 2,
+}
+
+plot_choices = {
+    # Colour dots by strain
+    "strain": True,
+    # Colour dots by score
+    "score": True,
+    # Combining strains and scores
+    "combined": True,
+}
+
 data_dir = "../data/raw/"
 
 # Define groups/strains
-group1_name = "st01253_tsa1tsa2morgan"
-group2_name = "st01253_by4742swain"
+group1_name = data_options["experimentID"] + "_" + data_options["group1"]
+group2_name = data_options["experimentID"] + "_" + data_options["group2"]
 
 
 # Load data
@@ -40,18 +66,10 @@ features_df = catch22.as_function(timeseries_df)
 # Scale
 features_scaled = standardscaler.as_function(features_df.T).T
 
-# UMAP
-reducer = umap.UMAP(
-    n_neighbors=10,
-    min_dist=0.05,
-    n_components=2,
-)
-mapper = reducer.fit(features_scaled)
-embedding = mapper.embedding_
-
-# Draw...
-
-# Colour dots by strain
+# Create lists for plot options
+# TODO: Merge dictionaries to compact code.  This will also compact the plotting
+# code.
+## Strain
 position_list = features_scaled.index.get_level_values("position").to_list()
 strain_list = [position.split("_")[0] for position in position_list]
 strain_relabel_lookup = {
@@ -63,17 +81,7 @@ strain_palette_map = {
     "tsa1Δ tsa2Δ": "C0",
     "BY4742": "C1",
 }
-
-fig_strain, ax_strain = plt.subplots(figsize=(6, 6))
-sns.scatterplot(
-    x=embedding[:, 0],
-    y=embedding[:, 1],
-    hue=strain_list,
-    palette=strain_palette_map,
-    ax=ax_strain,
-)
-
-# Colour dots by score
+## Score
 common_idx = features_scaled.index.intersection(labels_df.index)
 scores_list = labels_df.loc[common_idx].score.to_list()
 scores_relabel_lookup = {
@@ -85,17 +93,7 @@ scores_palette_map = {
     "Oscillatory": "C2",
     "Non-oscillatory": "C4",
 }
-
-fig_score, ax_score = plt.subplots(figsize=(6, 6))
-sns.scatterplot(
-    x=embedding[:, 0],
-    y=embedding[:, 1],
-    hue=scores_list,
-    palette=scores_palette_map,
-    ax=ax_score,
-)
-
-# Combining strains and scores
+## Combined
 label_list = []
 for strain, score in zip(strain_list, scores_list):
     if score == "Non-oscillatory":
@@ -109,18 +107,48 @@ label_palette_map = {
     "BY4742": "C1",
 }
 
-fig_combined, ax_combined = plt.subplots(figsize=(6, 6))
-sns.scatterplot(
-    x=embedding[:, 0],
-    y=embedding[:, 1],
-    hue=label_list,
-    palette=label_palette_map,
-    ax=ax_combined,
+# UMAP
+reducer = umap.UMAP(
+    n_neighbors=model_options["n_neighbors"],
+    min_dist=model_options["min_dist"],
+    n_components=model_options["n_components"],
 )
+mapper = reducer.fit(features_scaled)
+embedding = mapper.embedding_
+
+# Draw figures
+if plot_choices["strain"]:
+    fig_strain, ax_strain = plt.subplots(figsize=(6, 6))
+    sns.scatterplot(
+        x=embedding[:, 0],
+        y=embedding[:, 1],
+        hue=strain_list,
+        palette=strain_palette_map,
+        ax=ax_strain,
+    )
+
+if plot_choices["score"]:
+    fig_score, ax_score = plt.subplots(figsize=(6, 6))
+    sns.scatterplot(
+        x=embedding[:, 0],
+        y=embedding[:, 1],
+        hue=scores_list,
+        palette=scores_palette_map,
+        ax=ax_score,
+    )
+
+if plot_choices["combined"]:
+    fig_combined, ax_combined = plt.subplots(figsize=(6, 6))
+    sns.scatterplot(
+        x=embedding[:, 0],
+        y=embedding[:, 1],
+        hue=label_list,
+        palette=label_palette_map,
+        ax=ax_combined,
+    )
 
 # Save figures
-
-pdf_filename = "../reports/umap_single_st01253.pdf"
+pdf_filename = "../reports/umap_single_" + data_options["experimentID"] + ".pdf"
 with PdfPages(pdf_filename) as pdf:
     for fig in range(1, plt.gcf().number + 1):
         pdf.savefig(fig)
