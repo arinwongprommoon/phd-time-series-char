@@ -24,7 +24,7 @@ data_options = {
 
 model_options = {
     # Number of nearest neighbours for pruning
-    "neighbors": 7,
+    "neighbors": 10,
 }
 
 plot_choices = {
@@ -34,13 +34,13 @@ plot_choices = {
     # Community detection, modularity, Leiden algorithm
     "leiden": True,
     # Community detection, Constant Potts Model, with resolution
-    "cpm": True,
+    "cpm": False,
     # Resolution parameter
     "cpm/resolution": 0.01,
     # CPM, range of resolution values
     "cpm_range": True,
     # Resolution parameter: list of numbers to sweep through
-    "cpm_range/resolutions": [0.01, 0.02],
+    "cpm_range/resolutions": [0.01, 0.02, 0.03, 0.04, 0.05],
 }
 
 
