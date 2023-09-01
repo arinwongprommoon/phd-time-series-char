@@ -149,7 +149,7 @@ if plot_choices["combined"]:
 
 if plot_choices["leiden"]:
     partition_leiden = la.find_partition(graph, la.ModularityVertexPartition)
-    print(f"Number of communities: {partition_leiden._len}")
+    print(f"Leiden, number of communities: {partition_leiden._len}")
     filepath_leiden = (
         "../reports/graphclust_leiden_" + data_options["experimentID"] + ".pdf"
     )
@@ -166,7 +166,8 @@ if plot_choices["cpm"]:
         la.CPMVertexPartition,
         resolution_parameter=plot_choices["cpm/resolution"],
     )
-    print(f"Number of communities: {partition_cpm._len}")
+    print(f"CPM, resolution: {plot_choices['cpm/resolution']}")
+    print(f"CPM, number of communities: {partition_cpm._len}")
     filepath_cpm = (
         "../reports/graphclust_cpm_"
         + prettyfloat(plot_choices["cpm/resolution"])
