@@ -20,6 +20,7 @@ aliby = "^0.1.64"
 pycatch22 = "^0.4.2"
 igraph = "^0.10.6"
 pycairo = "^1.24.0"
+leidenalg = "^0.10.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
