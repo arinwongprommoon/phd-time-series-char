@@ -37,6 +37,10 @@ plot_choices = {
     "cpm": True,
     # Resolution parameter
     "cpm/resolution": 0.01,
+    # CPM, range of resolution values
+    "cpm_range": True,
+    # Resolution parameter: list of numbers to sweep through
+    "cpm_range/resolutions": [0.01, 0.02],
 }
 
 
@@ -146,6 +150,7 @@ if plot_choices["combined"]:
         "../reports/graphclust_combined_" + data_options["experimentID"] + ".pdf"
     )
     ig.plot(graph, filepath_combined, **visual_style)
+    print(f"Combined drawn\n")
 
 if plot_choices["leiden"]:
     partition_leiden = la.find_partition(graph, la.ModularityVertexPartition)
@@ -159,6 +164,7 @@ if plot_choices["leiden"]:
         layout=graph.layout("kk"),
         vertex_size=10,
     )
+    print("\n")
 
 if plot_choices["cpm"]:
     partition_cpm = la.find_partition(
@@ -181,3 +187,28 @@ if plot_choices["cpm"]:
         layout=graph.layout("kk"),
         vertex_size=10,
     )
+    print("\n")
+
+if plot_choices["cpm_range"]:
+    for resolution in plot_choices["cpm_range/resolutions"]:
+        partition_cpm = la.find_partition(
+            graph,
+            la.CPMVertexPartition,
+            resolution_parameter=resolution,
+        )
+        print(f"CPM, resolution: {resolution}")
+        print(f"CPM, number of communities: {partition_cpm._len}")
+        filepath_cpm = (
+            "../reports/graphclust_cpm_"
+            + prettyfloat(resolution)
+            + "_"
+            + data_options["experimentID"]
+            + ".pdf"
+        )
+        ig.plot(
+            partition_cpm,
+            target=filepath_cpm,
+            layout=graph.layout("kk"),
+            vertex_size=10,
+        )
+    print("\n")
