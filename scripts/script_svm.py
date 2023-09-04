@@ -26,7 +26,7 @@ data_options = {
 
 model_options = {
     # Transformer object to choose as featurisation
-    "transformer": FFTTransformer(),
+    "transformer": Catch22Transformer(),
     # Hyperparameters for SVC
     "C": 10.0,
     "gamma": "auto",
@@ -64,7 +64,7 @@ features_train, features_test, targets_train, targets_test = train_test_split(
     features,
     targets,
     train_size=model_options["tt_split"],
-    random_state=69,
+    random_state=42,
 )
 
 # Construct pipeline
