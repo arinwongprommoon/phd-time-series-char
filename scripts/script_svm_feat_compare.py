@@ -86,6 +86,7 @@ with open(csv_filepath, "w", newline="") as csvfile:
     # Header
     writer.writerow(["Featurisation", "Fold", "Measure", "Value"])
 
+    # Transformers
     for transformer_name, transformer in feat_options["transformers"].items():
         # Construct pipeline
         binary_pipeline = Pipeline(
@@ -110,6 +111,40 @@ with open(csv_filepath, "w", newline="") as csvfile:
             recall_str = [transformer_name, repeat, "Recall", fold[1]]
             writer.writerow(precision_str)
             writer.writerow(recall_str)
+
+    # Random
+    # Construct pipeline
+    random_pipeline = Pipeline(
+        [
+            ("featurise", NullTransformer()),
+            ("scaler", StandardScaler()),
+            (
+                "classifier",
+                SVC(
+                    C=model_options["C"],
+                    gamma=model_options["gamma"],
+                ),
+            ),
+        ]
+    )
+    # Scramble scores
+    targets = targets.sample(frac=1, random_state=69)
+    # Train-test split
+    features_train, features_test, targets_train, targets_test = train_test_split(
+        features,
+        targets,
+        train_size=model_options["tt_split"],
+        random_state=69,
+    )
+    kfold = StratifiedKFoldHandler(
+        random_pipeline, features, targets, model_options["kfold_nsplits"]
+    )
+    for repeat, fold in enumerate(kfold.kf_scores):
+        precision_str = ["Scrambled labels", repeat, "Precision", fold[0]]
+        recall_str = ["Scrambled labels", repeat, "Recall", fold[1]]
+        writer.writerow(precision_str)
+        writer.writerow(recall_str)
+
 
 # Draw strip plot
 pr_df = pd.read_csv(csv_filepath)
