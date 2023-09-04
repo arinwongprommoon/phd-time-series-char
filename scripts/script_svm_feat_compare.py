@@ -160,6 +160,7 @@ for idx, measure in enumerate(["Precision", "Recall"]):
     )
     ax[idx].set_ylim((0, 1))
     ax[idx].set_title(measure)
+    ax[idx].tick_params(labelrotation=45)
 
 # Save figures
 pdf_filename = "../reports/svm_feat_compare.pdf"
