@@ -15,11 +15,11 @@ data_options = {
     # Experiment ID.
     # Prefix 'is' for islay or 'st' for staffa.
     # ID is 5 digits, add leading zeros as appropriate.
-    "experimentID": "st01253",
+    "experimentID": "is20016",
     # Group (strain) ID for first group
-    "group1": "tsa1tsa2morgan",
+    "group1": "zwf1egf",
     # second group
-    "group2": "by4742swain",
+    "group2": "by4741",
 }
 
 model_options = {
@@ -91,13 +91,13 @@ features_scaled = standardscaler.as_function(features_df.T).T
 position_list = features_scaled.index.get_level_values("position").to_list()
 strain_list = [position.split("_")[0] for position in position_list]
 strain_relabel_lookup = {
-    "tsa1tsa2morgan": "tsa1Δ tsa2Δ",
-    "by4742swain": "BY4742",
+    "zwf1egf": "zwf1Δ",
+    "by4741": "BY4741",
 }
 strain_list = [strain_relabel_lookup.get(item, item) for item in strain_list]
 strain_palette_map = {
-    "tsa1Δ tsa2Δ": "C0",
-    "BY4742": "C1",
+    "zwf1Δ": "C0",
+    "BY4741": "C1",
 }
 ## Score
 common_idx = features_scaled.index.intersection(labels_df.index)
@@ -121,8 +121,8 @@ for strain, score in zip(strain_list, scores_list):
 
 label_palette_map = {
     "Non-oscillatory": "#d3d3d3",
-    "tsa1Δ tsa2Δ": "#1f77b4",
-    "BY4742": "#ff7f0e",
+    "zwf1Δ": "#1f77b4",
+    "BY4741": "#ff7f0e",
 }
 
 # Distance matrix
