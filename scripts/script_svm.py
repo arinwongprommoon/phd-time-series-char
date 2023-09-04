@@ -24,8 +24,6 @@ data_options = {
     "group1": "zwf1egf",
 }
 
-feat_options = {}
-
 model_options = {
     # Transformer object to choose as featurisation
     "transformer": FFTTransformer(),
@@ -34,6 +32,13 @@ model_options = {
     "gamma": "auto",
     # Train-test split
     "tt_split": 0.75,
+}
+
+plot_options = {
+    "precision_recall": True,
+    "predict_proba_hist": True,
+    "predict_proba_gallery": True,
+    "predict_proba_gallery/list_probs": [0, 0.2, 0.4, 0.6, 0.8, 1.0],
 }
 
 # Load data
@@ -83,69 +88,78 @@ binary_pipeline.fit(features_train, targets_train.to_numpy().ravel())
 true_targets = targets_test.to_numpy().ravel()
 predicted_targets = binary_pipeline.predict(features_test)
 
-# Precision-recall curve
-precision = precision_score(true_targets, predicted_targets)
-recall = recall_score(true_targets, predicted_targets)
-y_score = binary_pipeline.decision_function(features_test)
-y_test = true_targets
-
-fig_pr, ax_pr = plt.subplots()
-display = PrecisionRecallDisplay.from_predictions(
-    y_test, y_score, name="LinearSVC", plot_chance_level=True, ax=ax_pr
-)
-ax_pr.set_title("2-class Precision-Recall curve")
-
 # Predict probability
 predictproba_df = get_predictproba(binary_pipeline, features_test)
 
-# Histogram
-fig_hist, ax_hist = plt.subplots()
-sns.histplot(
-    predictproba_df,
-    x=1,
-    binwidth=0.05,
-    ax=ax_hist,
-)
-ax_hist.set_xlim((-0.05, 1.05))
-ax_hist.set_xlabel("Probability of oscillation")
 
-# Gallery
-predictproba_sorted = predictproba_df.sort_values(by=1)
-# Get list of probabilities of oscillation (category '1')
-proba_array = predictproba_sorted.to_numpy()[:, 1].ravel()
+if plot_options["precision_recall"]:
+    # Precision-recall curve
+    precision = precision_score(true_targets, predicted_targets)
+    recall = recall_score(true_targets, predicted_targets)
+    print(f"Precision: {precision}")
+    print(f"Recall: {recall}")
 
-list_probs = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    y_score = binary_pipeline.decision_function(features_test)
+    y_test = true_targets
 
-nrows = len(list_probs)
-fig_gallery, ax_gallery = plt.subplots(
-    nrows=nrows,
-    figsize=(10, 2 * nrows),
-    sharex=True,
-)
+    fig_pr, ax_pr = plt.subplots()
+    display = PrecisionRecallDisplay.from_predictions(
+        y_test, y_score, name="LinearSVC", plot_chance_level=True, ax=ax_pr
+    )
+    ax_pr.set_title("2-class Precision-Recall curve")
 
-for row_idx, prob in enumerate(list_probs):
-    prob_idx = np.searchsorted(proba_array, prob)
-    # Deal with edge case
-    if prob_idx >= len(proba_array):
-        prob_idx = len(proba_array) - 1
-    # Print actual probability
-    actual_prob = proba_array[prob_idx]
-    # Get cell index
-    cell_idx = predictproba_sorted.index[prob_idx]
-    # Get time series
-    timeseries = timeseries_df.loc[cell_idx]
-    # Draw
-    ax_gallery[row_idx].plot(timeseries)
-    ax_gallery[row_idx].xaxis.set_major_locator(ticker.MultipleLocator(20))
-    ax_gallery[row_idx].set_title(f"Oscillation probability = {actual_prob:.2f}")
 
-fig_gallery.add_subplot(111, frameon=False)
-plt.tick_params(labelcolor="none", top=False, bottom=False, left=False, right=False)
-plt.grid(False)
-plt.xlabel("Time (min)")
-plt.ylabel("Flavin fluorescence, normalised (AU)")
+if plot_options["predict_proba_hist"]:
+    # Histogram
+    fig_hist, ax_hist = plt.subplots()
+    sns.histplot(
+        predictproba_df,
+        x=1,
+        binwidth=0.05,
+        ax=ax_hist,
+    )
+    ax_hist.set_xlim((-0.05, 1.05))
+    ax_hist.set_xlabel("Probability of oscillation")
 
-# Save figures
+
+if plot_options["predict_proba_gallery"]:
+    # Gallery
+    predictproba_sorted = predictproba_df.sort_values(by=1)
+    # Get list of probabilities of oscillation (category '1')
+    proba_array = predictproba_sorted.to_numpy()[:, 1].ravel()
+
+    list_probs = plot_options["predict_proba_gallery/list_probs"]
+
+    nrows = len(list_probs)
+    fig_gallery, ax_gallery = plt.subplots(
+        nrows=nrows,
+        figsize=(10, 2 * nrows),
+        sharex=True,
+    )
+
+    for row_idx, prob in enumerate(list_probs):
+        prob_idx = np.searchsorted(proba_array, prob)
+        # Deal with edge case
+        if prob_idx >= len(proba_array):
+            prob_idx = len(proba_array) - 1
+        # Print actual probability
+        actual_prob = proba_array[prob_idx]
+        # Get cell index
+        cell_idx = predictproba_sorted.index[prob_idx]
+        # Get time series
+        timeseries = timeseries_df.loc[cell_idx]
+        # Draw
+        ax_gallery[row_idx].plot(timeseries)
+        ax_gallery[row_idx].xaxis.set_major_locator(ticker.MultipleLocator(20))
+        ax_gallery[row_idx].set_title(f"Oscillation probability = {actual_prob:.2f}")
+
+    fig_gallery.add_subplot(111, frameon=False)
+    plt.tick_params(labelcolor="none", top=False, bottom=False, left=False, right=False)
+    plt.grid(False)
+    plt.xlabel("Time (min)")
+    plt.ylabel("Flavin fluorescence, normalised (AU)")
+
+    # Save figures
 pdf_filename = "../reports/svm.pdf"
 with PdfPages(pdf_filename) as pdf:
     for fig in range(1, plt.gcf().number + 1):
