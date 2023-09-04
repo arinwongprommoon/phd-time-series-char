@@ -34,3 +34,18 @@ class FFTTransformer(BaseEstimator, TransformerMixin):
         fft_runner = fft(fftParameters.default())
         _, power = fft_runner.run(x)
         return power
+
+
+class NullTransformer(BaseEstimator, TransformerMixin):
+    """Use time series as features"""
+
+    def __init__(self):
+        pass
+
+    def fit(self, x, y=None):
+        self.x = x
+        self.y = y
+        return self
+
+    def transform(self, x):
+        return x
