@@ -13,9 +13,9 @@ data_options = {
     # Experiment ID.
     # Prefix 'is' for islay or 'st' for staffa.
     # ID is 5 digits, add leading zeros as appropriate.
-    "experimentID": "st01253",
+    "experimentID": "is20016",
     # Group (strain) ID for first group
-    "group1": "by4742swain",
+    "group1": "zwf1egf",
 }
 
 plot_choices = {
@@ -26,7 +26,7 @@ plot_choices = {
     # ROC curve
     "roc": True,
     # False discovery rates
-    "roc/fdr_vec": np.power(10, np.linspace(-8, -1, 100)),
+    "roc/fdr_vec": np.power(10, np.linspace(-12, 0, 100)),
 }
 
 
