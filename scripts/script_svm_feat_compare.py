@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import csv
+import os
 
 from src.ml.transformers import Catch22Transformer, FFTTransformer, NullTransformer
 from src.ml.predict import get_predictions, get_predictproba
@@ -72,24 +74,38 @@ features_train, features_test, targets_train, targets_test = train_test_split(
     random_state=69,
 )
 
+# Write precision and recall to CSV
+csv_filepath = "../reports/svm_feat_compare.csv"
+if os.path.exists(csv_filepath):
+    os.remove(csv_filepath)
 
-for transformer in feat_options["transformers"].values():
-    # Construct pipeline
-    binary_pipeline = Pipeline(
-        [
-            ("featurise", transformer),
-            ("scaler", StandardScaler()),
-            (
-                "classifier",
-                SVC(
-                    C=model_options["C"],
-                    gamma=model_options["gamma"],
+with open(csv_filepath, "w", newline="") as csvfile:
+    writer = csv.writer(csvfile, delimiter=",")
+
+    # Header
+    writer.writerow(["Featurisation", "Fold", "Measure", "Value"])
+
+    for transformer_name, transformer in feat_options["transformers"].items():
+        # Construct pipeline
+        binary_pipeline = Pipeline(
+            [
+                ("featurise", transformer),
+                ("scaler", StandardScaler()),
+                (
+                    "classifier",
+                    SVC(
+                        C=model_options["C"],
+                        gamma=model_options["gamma"],
+                    ),
                 ),
-            ),
-        ]
-    )
+            ]
+        )
 
-    kfold = StratifiedKFoldHandler(
-        binary_pipeline, features, targets, model_options["kfold_nsplits"]
-    )
-    kfold.pretty_print()
+        kfold = StratifiedKFoldHandler(
+            binary_pipeline, features, targets, model_options["kfold_nsplits"]
+        )
+        for repeat, fold in enumerate(kfold.kf_scores):
+            precision_str = [transformer_name, repeat, "Precision", fold[0]]
+            recall_str = [transformer_name, repeat, "Recall", fold[1]]
+            writer.writerow(precision_str)
+            writer.writerow(recall_str)
