@@ -63,13 +63,6 @@ timeseries_dropna = timeseries_df.dropna()
 features = timeseries_dropna
 targets = labels_df.loc[features.index]
 
-# Train-test split
-features_train, features_test, targets_train, targets_test = train_test_split(
-    features,
-    targets,
-    train_size=model_options["tt_split"],
-    random_state=69,
-)
 
 # Write precision and recall to CSV
 csv_filepath = "../reports/svm_feat_compare.csv"
