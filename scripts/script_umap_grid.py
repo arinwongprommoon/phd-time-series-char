@@ -23,8 +23,8 @@ labels_df = pd.read_csv("../data/processed/labels_df.csv", index_col=[0, 1, 2])
 position_list = features_scaled.index.get_level_values("position").to_list()
 strain_list = [position.split("_")[0] for position in position_list]
 strain_relabel_lookup = {
-    "tsa1tsa2morgan": "tsa1Δ tsa2Δ",
-    "by4742swain": "BY4742",
+    "zwf1egf": "zwf1Δ",
+    "by4741": "BY4741",
 }
 strain_list = [strain_relabel_lookup.get(item, item) for item in strain_list]
 
@@ -46,8 +46,8 @@ for strain, score in zip(strain_list, scores_list):
 
 label_palette_map = {
     "Non-oscillatory": "lightgrey",
-    "tsa1Δ tsa2Δ": "C0",
-    "BY4742": "C1",
+    "zwf1Δ": "C0",
+    "BY4741": "C1",
 }
 
 embedding_array = umap_grid(hyperparam_dict, features_scaled)
@@ -59,7 +59,7 @@ plot_umap_grid(
 )
 
 # Save figures
-pdf_filename = "../reports/umap_grid_st01235.pdf"
+pdf_filename = "../reports/umap_grid_is20016.pdf"
 with PdfPages(pdf_filename) as pdf:
     for fig in range(1, plt.gcf().number + 1):
         pdf.savefig(fig)
