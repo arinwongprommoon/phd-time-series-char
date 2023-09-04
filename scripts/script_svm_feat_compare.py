@@ -5,6 +5,7 @@ import pandas as pd
 import seaborn as sns
 import csv
 import os
+from matplotlib.backends.backend_pdf import PdfPages
 
 from src.ml.transformers import Catch22Transformer, FFTTransformer, NullTransformer
 from src.ml.predict import get_predictions, get_predictproba
@@ -109,3 +110,26 @@ with open(csv_filepath, "w", newline="") as csvfile:
             recall_str = [transformer_name, repeat, "Recall", fold[1]]
             writer.writerow(precision_str)
             writer.writerow(recall_str)
+
+# Draw strip plot
+pr_df = pd.read_csv(csv_filepath)
+
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(10, 4))
+
+for idx, measure in enumerate(["Precision", "Recall"]):
+    sns.stripplot(
+        data=pr_df[pr_df.Measure == measure],
+        x="Featurisation",
+        y="Value",
+        ax=ax[idx],
+    )
+    ax[idx].set_ylim((0, 1))
+    ax[idx].set_title(measure)
+
+# Save figures
+pdf_filename = "../reports/svm_feat_compare.pdf"
+with PdfPages(pdf_filename) as pdf:
+    for fig in range(1, plt.gcf().number + 1):
+        pdf.savefig(fig)
+# Close all figures
+plt.close("all")
