@@ -1,23 +1,19 @@
 #!/usr/bin/env python3
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
 import csv
 import os
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+
 from matplotlib.backends.backend_pdf import PdfPages
-
-from src.ml.transformers import Catch22Transformer, FFTTransformer, NullTransformer
-from src.ml.predict import get_predictions, get_predictproba
-from src.ml.metrics import StratifiedKFoldHandler
-
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import RFECV
-from sklearn.model_selection import StratifiedKFold, train_test_split
-from sklearn.metrics import precision_score, recall_score, roc_curve, auc, roc_auc_score
+from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
+
+from src.ml.metrics import StratifiedKFoldHandler
+from src.ml.transformers import Catch22Transformer, FFTTransformer, NullTransformer
 
 data_options = {
     # Experiment ID.
