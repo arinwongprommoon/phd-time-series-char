@@ -1,0 +1,16 @@
+Combined drawn
+
+Leiden, number of communities: 9
+
+
+CPM, resolution: 0.01
+CPM, number of communities: 5
+CPM, resolution: 0.02
+CPM, number of communities: 9
+CPM, resolution: 0.03
+CPM, number of communities: 13
+CPM, resolution: 0.04
+CPM, number of communities: 17
+CPM, resolution: 0.05
+CPM, number of communities: 21
+
