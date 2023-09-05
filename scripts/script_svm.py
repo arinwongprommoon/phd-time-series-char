@@ -28,7 +28,7 @@ model_options = {
     # Transformer object to choose as featurisation
     "transformer": Catch22Transformer(),
     # Scramble scores, as a control
-    "scramble": True,
+    "scramble": False,
     # Hyperparameters for SVC
     "C": 10.0,
     "gamma": "auto",
