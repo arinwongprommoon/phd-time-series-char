@@ -46,6 +46,12 @@ def fdr_classify(scores, q):
     return classifications_df
 
 
+# https://stackoverflow.com/questions/24467972/calculate-area-of-polygon-given-x-y-coordinates
+def polygon_area(x, y):
+    """Compute polygon area based on shoelace formula"""
+    return 0.5 * np.abs(np.dot(x, np.roll(y, 1)) - np.dot(y, np.roll(x, 1)))
+
+
 # Load data
 data_dir = "../data/raw/"
 group1_name = data_options["experimentID"] + "_" + data_options["group1"]
@@ -179,6 +185,12 @@ if plot_choices["roc"]:
     ax_roc.set_ylim((0, 1))
     ax_roc.set_xlabel("False positive rate")
     ax_roc.set_ylabel("True positive rate")
+    # Calculate area under ROC
+    x_axis = np.array([0] + FPR_axis + [1])
+    y_axis = np.array([0] + TPR_axis + [1])
+    auroc = polygon_area(x_axis, y_axis)
+    auroc += 0.5
+    print(f"Area under ROC = {auroc}")
 
 # Save figures
 pdf_filename = "../reports/glynn_" + data_options["experimentID"] + ".pdf"
