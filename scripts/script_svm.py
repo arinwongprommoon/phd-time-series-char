@@ -27,6 +27,8 @@ data_options = {
 model_options = {
     # Transformer object to choose as featurisation
     "transformer": Catch22Transformer(),
+    # Scramble scores, as a control
+    "scramble": True,
     # Hyperparameters for SVC
     "C": 10.0,
     "gamma": "auto",
@@ -58,6 +60,9 @@ timeseries_dropna = timeseries_df.dropna()
 # Manipulate data variables to create data and target matrices
 features = timeseries_dropna
 targets = labels_df.loc[features.index]
+if model_options["scramble"]:
+    # Scramble scores
+    targets = targets.sample(frac=1, random_state=69)
 
 # Train-test split
 features_train, features_test, targets_train, targets_test = train_test_split(
