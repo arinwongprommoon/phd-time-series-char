@@ -88,8 +88,8 @@ strain_palette_map = {
 common_idx = features_scaled.index.intersection(labels_df.index)
 scores_list = labels_df.loc[common_idx].score.to_list()
 scores_relabel_lookup = {
-    0: "Oscillatory",
-    1: "Non-oscillatory",
+    1: "Oscillatory",
+    0: "Non-oscillatory",
 }
 scores_list = [scores_relabel_lookup.get(item, item) for item in scores_list]
 scores_palette_map = {
