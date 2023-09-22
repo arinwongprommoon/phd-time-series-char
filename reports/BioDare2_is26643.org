@@ -1,0 +1,13 @@
+#+title: Bio Dare2 Is26643
+
+* Period estimation
+Number of time series included in summary statistics
+(the rest were labelled 'needs attention', without further explanation, and thrown out)
+Total time series = 190
+
+| Method   | flavin | mCherry |
+|----------+--------+---------|
+| mFourFit |    190 |     190 |
+| FFT NLLS |     20 |       9 |
+| MESA     |    169 |     177 |
+| LSP      |    183 |     185 |
