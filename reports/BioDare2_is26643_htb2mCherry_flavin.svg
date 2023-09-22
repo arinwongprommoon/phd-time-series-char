@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="478.5"
+   viewBox="0 0 478.5 222.90363"
+   version="1.1"
+   id="svg332"
+   sodipodi:docname="BioDare2_is26643_htb2mCherry_flavin.svg"
+   height="222.90363"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs336" />
+  <sodipodi:namedview
+     id="namedview334"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.8031223"
+     inkscape:cx="248.73521"
+     inkscape:cy="130.60678"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg332" />
+  <g
+     class="mainPane"
+     transform="translate(7.5,6)"
+     id="g330">
+    <g
+       class="axisWrapper"
+       id="g278">
+      <g
+         class="xTopAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         id="g204">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,-6 V 0 H 465 V -6"
+           id="path148" />
+      </g>
+      <g
+         class="xBottomAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         transform="translate(0,30)"
+         id="g262">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,6 V 0 h 465 v 6"
+           id="path206" />
+        <g
+           class="tick"
+           opacity="1"
+           id="g212">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line208"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(58.125)"
+           id="g218">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line214"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(116.25)"
+           id="g224">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line220"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(174.375)"
+           id="g230">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line226"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(232.5)"
+           id="g236">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line232"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(290.625)"
+           id="g242">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line238"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(348.75)"
+           id="g248">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line244"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(406.875)"
+           id="g254">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line250"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(465)"
+           id="g260">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line256"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+      </g>
+      <g
+         class="yLeftAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="end"
+         id="g272">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M -6,0 H 0 V 30 H -6"
+           id="path264" />
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(0,15)"
+           id="g270">
+          <line
+             stroke="currentColor"
+             x2="-6"
+             id="line266"
+             x1="0"
+             y1="0"
+             y2="0" />
+          <text
+             fill="currentColor"
+             x="-9"
+             dy="0.31999999em"
+             id="text268" />
+        </g>
+      </g>
+      <g
+         class="yRightAxis"
+         transform="translate(465)"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="start"
+         id="g276">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 6,0 H 0 v 30 h 6"
+           id="path274" />
+      </g>
+    </g>
+    <g
+       class="backLabelsWrapper"
+       id="g284">
+      <g
+         class="yLabel"
+         id="g282">
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;opacity:0.3"
+           x="5"
+           y="15"
+           id="text280">mFourFit</text>
+      </g>
+    </g>
+    <g
+       class="dataWrapper"
+       id="g312">
+      <g
+         class="boxWidget"
+         id="g310">
+        <rect
+           class="backdrop"
+           style="fill:#ffffff;fill-opacity:1"
+           x="121.7125"
+           y="5"
+           width="343.28751"
+           height="20"
+           id="rect286" />
+        <g
+           class="whiskers"
+           id="g296">
+          <line
+             class="whiskerlineL"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="126.7125"
+             y1="15"
+             x2="292.2525"
+             y2="15"
+             id="line288" />
+          <line
+             class="whiskerlineR"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="436.34436"
+             y1="15"
+             x2="465"
+             y2="15"
+             id="line290" />
+          <line
+             class="whiskertipL"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="126.7125"
+             y1="5"
+             x2="126.7125"
+             y2="25"
+             id="line292" />
+          <line
+             class="whiskertipR"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="465"
+             y1="5"
+             x2="465"
+             y2="25"
+             id="line294" />
+        </g>
+        <g
+           class="box"
+           id="g304">
+          <rect
+             class="box"
+             style="fill:#1f77b4;fill-opacity:0.35;stroke:#1f77b4;stroke-width:2px"
+             x="292.2525"
+             y="5"
+             width="144.09187"
+             height="20"
+             id="rect298" />
+          <line
+             class="medianline"
+             style="stroke:#1f77b4;stroke-width:2px"
+             x1="393.27374"
+             y1="5"
+             x2="393.27374"
+             y2="25"
+             id="line300" />
+          <line
+             class="meanline"
+             style="stroke:#1f77b4;stroke-width:4px;stroke-dasharray:4px, 2px"
+             x1="354.2309"
+             y1="5"
+             x2="354.2309"
+             y2="25"
+             id="line302" />
+        </g>
+        <g
+           class="outliers"
+           id="g308">
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="1.395"
+             cy="15"
+             id="circle306" />
+        </g>
+      </g>
+    </g>
+    <g
+       class="tooltipWrapper"
+       style="display:none"
+       id="g318">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.8;stroke:#808080"
+         x="372.71567"
+         y="-10.175874"
+         width="41.116142"
+         height="20.591841"
+         id="rect314" />
+      <text
+         class="tooltip"
+         text-anchor="middle"
+         style="opacity:1"
+         x="393.27374"
+         y="5"
+         id="text316">43.83</text>
+    </g>
+    <g
+       class="labelsWrapper"
+       id="g328">
+      <g
+         class="yLabel"
+         id="g326">
+        <rect
+           class="yTrigger"
+           style="fill:#1f77b4;fill-opacity:1;stroke:#1f77b4"
+           x="-7"
+           y="4.924068"
+           width="7"
+           height="20.151863"
+           id="rect320" />
+        <rect
+           class="yLabel"
+           style="display:none;fill:#1f77b4;fill-opacity:0.35"
+           x="0"
+           y="4.924068"
+           width="79.373413"
+           height="21.151863"
+           id="rect322" />
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;display:none;opacity:1"
+           x="5"
+           y="15"
+           id="text324">htb2mCherry</text>
+      </g>
+    </g>
+  </g>
+  <g
+     class="mainPane"
+     transform="translate(7.5,56)"
+     id="g638">
+    <g
+       class="axisWrapper"
+       id="g588">
+      <g
+         class="xTopAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         id="g514">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,-6 V 0 H 465 V -6"
+           id="path458" />
+      </g>
+      <g
+         class="xBottomAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         transform="translate(0,30)"
+         id="g572">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,6 V 0 h 465 v 6"
+           id="path516" />
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(58.125)"
+           id="g528">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line524"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(116.25)"
+           id="g534">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line530"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(174.375)"
+           id="g540">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line536"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(232.5)"
+           id="g546">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line542"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(290.625)"
+           id="g552">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line548"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(348.75)"
+           id="g558">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line554"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(406.875)"
+           id="g564">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line560"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(465)"
+           id="g570">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line566"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+      </g>
+      <g
+         class="yLeftAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="end"
+         id="g582">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M -6,0 H 0 V 30 H -6"
+           id="path574" />
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(0,15)"
+           id="g580">
+          <line
+             stroke="currentColor"
+             x2="-6"
+             id="line576"
+             x1="0"
+             y1="0"
+             y2="0" />
+          <text
+             fill="currentColor"
+             x="-9"
+             dy="0.31999999em"
+             id="text578" />
+        </g>
+      </g>
+      <g
+         class="yRightAxis"
+         transform="translate(465)"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="start"
+         id="g586">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 6,0 H 0 v 30 h 6"
+           id="path584" />
+      </g>
+    </g>
+    <g
+       class="backLabelsWrapper"
+       id="g594">
+      <g
+         class="yLabel"
+         id="g592">
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;opacity:0.3"
+           x="5"
+           y="15"
+           id="text590">FFT NLLS</text>
+      </g>
+    </g>
+    <g
+       class="dataWrapper"
+       id="g620">
+      <g
+         class="boxWidget"
+         id="g618">
+        <rect
+           class="backdrop"
+           style="fill:#ffffff;fill-opacity:1"
+           x="120.7825"
+           y="5"
+           width="274.12"
+           height="20"
+           id="rect596" />
+        <g
+           class="whiskers"
+           id="g606">
+          <line
+             class="whiskerlineL"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="125.7825"
+             y1="15"
+             x2="170.50969"
+             y2="15"
+             id="line598" />
+          <line
+             class="whiskerlineR"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="339.45001"
+             y1="15"
+             x2="389.9025"
+             y2="15"
+             id="line600" />
+          <line
+             class="whiskertipL"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="125.7825"
+             y1="5"
+             x2="125.7825"
+             y2="25"
+             id="line602" />
+          <line
+             class="whiskertipR"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="389.9025"
+             y1="5"
+             x2="389.9025"
+             y2="25"
+             id="line604" />
+        </g>
+        <g
+           class="box"
+           id="g614">
+          <rect
+             class="box"
+             style="fill:#1f77b4;fill-opacity:0.35;stroke:#1f77b4;stroke-width:2px"
+             x="170.50969"
+             y="5"
+             width="168.94031"
+             height="20"
+             id="rect608" />
+          <line
+             class="medianline"
+             style="stroke:#1f77b4;stroke-width:2px"
+             x1="257.55188"
+             y1="5"
+             x2="257.55188"
+             y2="25"
+             id="line610" />
+          <line
+             class="meanline"
+             style="stroke:#1f77b4;stroke-width:4px;stroke-dasharray:4px, 2px"
+             x1="254.51193"
+             y1="5"
+             x2="254.51193"
+             y2="25"
+             id="line612" />
+        </g>
+        <g
+           class="outliers"
+           id="g616" />
+      </g>
+    </g>
+    <g
+       class="tooltipWrapper"
+       style="display:none"
+       id="g626">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.8;stroke:#808080"
+         id="rect622"
+         width="0"
+         height="0"
+         x="0"
+         y="0" />
+      <text
+         class="tooltip"
+         text-anchor="middle"
+         style="opacity:1"
+         id="text624" />
+    </g>
+    <g
+       class="labelsWrapper"
+       id="g636">
+      <g
+         class="yLabel"
+         id="g634">
+        <rect
+           class="yTrigger"
+           style="fill:#1f77b4;fill-opacity:1;stroke:#1f77b4"
+           x="-7"
+           y="4.924068"
+           width="7"
+           height="20.151863"
+           id="rect628" />
+        <rect
+           class="yLabel"
+           style="display:none;fill:#1f77b4;fill-opacity:0.35"
+           x="0"
+           y="4.924068"
+           width="79.373413"
+           height="21.151863"
+           id="rect630" />
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;display:none;opacity:1"
+           x="5"
+           y="15"
+           id="text632">htb2mCherry</text>
+      </g>
+    </g>
+  </g>
+  <g
+     class="mainPane"
+     transform="translate(7.5,106)"
+     id="g1638">
+    <g
+       class="axisWrapper"
+       id="g1530">
+      <g
+         class="xTopAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         id="g1456">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,-6 V 0 H 465 V -6"
+           id="path1400" />
+      </g>
+      <g
+         class="xBottomAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         transform="translate(0,30)"
+         id="g1514">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,6 V 0 h 465 v 6"
+           id="path1458" />
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(58.125)"
+           id="g1470">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1466"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(116.25)"
+           id="g1476">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1472"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(174.375)"
+           id="g1482">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1478"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(232.5)"
+           id="g1488">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1484"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(290.625)"
+           id="g1494">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1490"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(348.75)"
+           id="g1500">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1496"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(406.875)"
+           id="g1506">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1502"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(465)"
+           id="g1512">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line1508"
+             x1="0"
+             y1="0"
+             x2="0" />
+        </g>
+      </g>
+      <g
+         class="yLeftAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="end"
+         id="g1524">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M -6,0 H 0 V 30 H -6"
+           id="path1516" />
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(0,15)"
+           id="g1522">
+          <line
+             stroke="currentColor"
+             x2="-6"
+             id="line1518"
+             x1="0"
+             y1="0"
+             y2="0" />
+          <text
+             fill="currentColor"
+             x="-9"
+             dy="0.31999999em"
+             id="text1520" />
+        </g>
+      </g>
+      <g
+         class="yRightAxis"
+         transform="translate(465)"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="start"
+         id="g1528">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 6,0 H 0 v 30 h 6"
+           id="path1526" />
+      </g>
+    </g>
+    <g
+       class="backLabelsWrapper"
+       id="g1536">
+      <g
+         class="yLabel"
+         id="g1534">
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;opacity:0.3"
+           x="5"
+           y="15"
+           id="text1532">MESA</text>
+      </g>
+    </g>
+    <g
+       class="dataWrapper"
+       id="g1620">
+      <g
+         class="boxWidget"
+         id="g1618">
+        <rect
+           class="backdrop"
+           style="fill:#ffffff;fill-opacity:1"
+           x="116.1325"
+           y="5"
+           width="106.9525"
+           height="20"
+           id="rect1538" />
+        <g
+           class="whiskers"
+           id="g1548">
+          <line
+             class="whiskerlineL"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="121.1325"
+             y1="15"
+             x2="142.52251"
+             y2="15"
+             id="line1540" />
+          <line
+             class="whiskerlineR"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="177.8625"
+             y1="15"
+             x2="218.08501"
+             y2="15"
+             id="line1542" />
+          <line
+             class="whiskertipL"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="121.1325"
+             y1="5"
+             x2="121.1325"
+             y2="25"
+             id="line1544" />
+          <line
+             class="whiskertipR"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="218.08501"
+             y1="5"
+             x2="218.08501"
+             y2="25"
+             id="line1546" />
+        </g>
+        <g
+           class="box"
+           id="g1556">
+          <rect
+             class="box"
+             style="fill:#1f77b4;fill-opacity:0.35;stroke:#1f77b4;stroke-width:2px"
+             x="142.52251"
+             y="5"
+             width="35.34"
+             height="20"
+             id="rect1550" />
+          <line
+             class="medianline"
+             style="stroke:#1f77b4;stroke-width:2px"
+             x1="156.705"
+             y1="5"
+             x2="156.705"
+             y2="25"
+             id="line1552" />
+          <line
+             class="meanline"
+             style="stroke:#1f77b4;stroke-width:4px;stroke-dasharray:4px, 2px"
+             x1="193.28867"
+             y1="5"
+             x2="193.28867"
+             y2="25"
+             id="line1554" />
+        </g>
+        <g
+           class="outliers"
+           id="g1616">
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="247.38"
+             cy="15"
+             id="circle1558" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="264.58499"
+             cy="15"
+             id="circle1560" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="276.67499"
+             cy="15"
+             id="circle1562" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="280.16251"
+             cy="15"
+             id="circle1564" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="315.73499"
+             cy="15"
+             id="circle1566" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="323.8725"
+             cy="15"
+             id="circle1568" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="334.10251"
+             cy="15"
+             id="circle1570" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="337.82251"
+             cy="15"
+             id="circle1572" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="359.67749"
+             cy="15"
+             id="circle1574" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="360.14249"
+             cy="15"
+             id="circle1576" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="365.95499"
+             cy="15"
+             id="circle1578" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="368.51251"
+             cy="15"
+             id="circle1580" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="369.9075"
+             cy="15"
+             id="circle1582" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="371.76749"
+             cy="15"
+             id="circle1584" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="375.48749"
+             cy="15"
+             id="circle1586" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="389.20499"
+             cy="15"
+             id="circle1588" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="390.36749"
+             cy="15"
+             id="circle1590" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="410.595"
+             cy="15"
+             id="circle1592" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="413.85001"
+             cy="15"
+             id="circle1594" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="414.08249"
+             cy="15"
+             id="circle1596" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="423.38251"
+             cy="15"
+             id="circle1598" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="426.87"
+             cy="15"
+             id="circle1600" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="429.19501"
+             cy="15"
+             id="circle1602" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="439.42499"
+             cy="15"
+             id="circle1604" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="447.5625"
+             cy="15"
+             id="circle1606" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="450.35251"
+             cy="15"
+             id="circle1608" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="462.20999"
+             cy="15"
+             id="circle1610" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="462.20999"
+             cy="15"
+             id="circle1612" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="464.07001"
+             cy="15"
+             id="circle1614" />
+        </g>
+      </g>
+    </g>
+    <g
+       class="tooltipWrapper"
+       style="display:none"
+       id="g1626">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.8;stroke:#808080"
+         id="rect1622"
+         width="0"
+         height="0"
+         x="0"
+         y="0" />
+      <text
+         class="tooltip"
+         text-anchor="middle"
+         style="opacity:1"
+         id="text1624" />
+    </g>
+    <g
+       class="labelsWrapper"
+       id="g1636">
+      <g
+         class="yLabel"
+         id="g1634">
+        <rect
+           class="yTrigger"
+           style="fill:#1f77b4;fill-opacity:1;stroke:#1f77b4"
+           x="-7"
+           y="4.924068"
+           width="7"
+           height="20.151863"
+           id="rect1628" />
+        <rect
+           class="yLabel"
+           style="display:none;fill:#1f77b4;fill-opacity:0.35"
+           x="0"
+           y="4.924068"
+           width="79.373413"
+           height="21.151863"
+           id="rect1630" />
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;display:none;opacity:1"
+           x="5"
+           y="15"
+           id="text1632">htb2mCherry</text>
+      </g>
+    </g>
+  </g>
+  <g
+     class="mainPane"
+     transform="translate(7.5,156)"
+     id="g2764">
+    <g
+       class="axisWrapper"
+       id="g2650">
+      <g
+         class="xTopAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         id="g2576">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,-6 V 0 H 465 V -6"
+           id="path2520" />
+      </g>
+      <g
+         class="xBottomAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="middle"
+         transform="translate(0,30)"
+         id="g2634">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 0,6 V 0 h 465 v 6"
+           id="path2578" />
+        <g
+           class="tick"
+           opacity="1"
+           id="g2584">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2580"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2582">10</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(58.125)"
+           id="g2590">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2586"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2588">15</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(116.25)"
+           id="g2596">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2592"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2594">20</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(174.375)"
+           id="g2602">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2598"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2600">25</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(232.5)"
+           id="g2608">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2604"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2606">30</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(290.625)"
+           id="g2614">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2610"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2612">35</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(348.75)"
+           id="g2620">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2616"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2618">40</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(406.875)"
+           id="g2626">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2622"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2624">45</text>
+        </g>
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(465)"
+           id="g2632">
+          <line
+             stroke="currentColor"
+             y2="6"
+             id="line2628"
+             x1="0"
+             y1="0"
+             x2="0" />
+          <text
+             fill="currentColor"
+             y="9"
+             dy="0.70999998em"
+             id="text2630">50</text>
+        </g>
+      </g>
+      <g
+         class="yLeftAxis"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="end"
+         id="g2644">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M -6,0 H 0 V 30 H -6"
+           id="path2636" />
+        <g
+           class="tick"
+           opacity="1"
+           transform="translate(0,15)"
+           id="g2642">
+          <line
+             stroke="currentColor"
+             x2="-6"
+             id="line2638"
+             x1="0"
+             y1="0"
+             y2="0" />
+          <text
+             fill="currentColor"
+             x="-9"
+             dy="0.31999999em"
+             id="text2640" />
+        </g>
+      </g>
+      <g
+         class="yRightAxis"
+         transform="translate(465)"
+         fill="none"
+         font-size="10px"
+         font-family="sans-serif"
+         text-anchor="start"
+         id="g2648">
+        <path
+           class="domain"
+           stroke="currentColor"
+           d="M 6,0 H 0 v 30 h 6"
+           id="path2646" />
+      </g>
+    </g>
+    <g
+       class="backLabelsWrapper"
+       id="g2656">
+      <g
+         class="yLabel"
+         id="g2654">
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;opacity:0.3"
+           x="5"
+           y="15"
+           id="text2652">LSP</text>
+      </g>
+    </g>
+    <g
+       class="dataWrapper"
+       id="g2746">
+      <g
+         class="boxWidget"
+         id="g2744">
+        <rect
+           class="backdrop"
+           style="fill:#ffffff;fill-opacity:1"
+           x="100.7875"
+           y="5"
+           width="206.46249"
+           height="20"
+           id="rect2658" />
+        <g
+           class="whiskers"
+           id="g2668">
+          <line
+             class="whiskerlineL"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="105.7875"
+             y1="15"
+             x2="148.45125"
+             y2="15"
+             id="line2660" />
+          <line
+             class="whiskerlineR"
+             style="stroke:#1f77b4;stroke-width:1px;stroke-dasharray:4px, 3px"
+             x1="210.52875"
+             y1="15"
+             x2="302.25"
+             y2="15"
+             id="line2662" />
+          <line
+             class="whiskertipL"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="105.7875"
+             y1="5"
+             x2="105.7875"
+             y2="25"
+             id="line2664" />
+          <line
+             class="whiskertipR"
+             style="stroke:#1f77b4;stroke-width:1px"
+             x1="302.25"
+             y1="5"
+             x2="302.25"
+             y2="25"
+             id="line2666" />
+        </g>
+        <g
+           class="box"
+           id="g2676">
+          <rect
+             class="box"
+             style="fill:#1f77b4;fill-opacity:0.35;stroke:#1f77b4;stroke-width:2px"
+             x="148.45125"
+             y="5"
+             width="62.077499"
+             height="20"
+             id="rect2670" />
+          <line
+             class="medianline"
+             style="stroke:#1f77b4;stroke-width:2px"
+             x1="171.58501"
+             y1="5"
+             x2="171.58501"
+             y2="25"
+             id="line2672" />
+          <line
+             class="meanline"
+             style="stroke:#1f77b4;stroke-width:4px;stroke-dasharray:4px, 2px"
+             x1="205.77902"
+             y1="5"
+             x2="205.77902"
+             y2="25"
+             id="line2674" />
+        </g>
+        <g
+           class="outliers"
+           id="g2742">
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="303.8775"
+             cy="15"
+             id="circle2678" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="309.22501"
+             cy="15"
+             id="circle2680" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="312.01501"
+             cy="15"
+             id="circle2682" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="318.29251"
+             cy="15"
+             id="circle2684" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="325.73251"
+             cy="15"
+             id="circle2686" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="327.35999"
+             cy="15"
+             id="circle2688" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="338.05499"
+             cy="15"
+             id="circle2690" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="342.4725"
+             cy="15"
+             id="circle2692" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="344.565"
+             cy="15"
+             id="circle2694" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="346.89001"
+             cy="15"
+             id="circle2696" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="347.1225"
+             cy="15"
+             id="circle2698" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="352.23749"
+             cy="15"
+             id="circle2700" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="355.0275"
+             cy="15"
+             id="circle2702" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="358.7475"
+             cy="15"
+             id="circle2704" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="360.375"
+             cy="15"
+             id="circle2706" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="364.56"
+             cy="15"
+             id="circle2708" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="381.76501"
+             cy="15"
+             id="circle2710" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="385.01999"
+             cy="15"
+             id="circle2712" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="388.04251"
+             cy="15"
+             id="circle2714" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="395.48251"
+             cy="15"
+             id="circle2716" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="401.76001"
+             cy="15"
+             id="circle2718" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="405.94501"
+             cy="15"
+             id="circle2720" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="407.57251"
+             cy="15"
+             id="circle2722" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="418.5"
+             cy="15"
+             id="circle2724" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="422.685"
+             cy="15"
+             id="circle2726" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="423.61499"
+             cy="15"
+             id="circle2728" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="428.0325"
+             cy="15"
+             id="circle2730" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="431.98499"
+             cy="15"
+             id="circle2732" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="440.35501"
+             cy="15"
+             id="circle2734" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="440.58749"
+             cy="15"
+             id="circle2736" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="453.375"
+             cy="15"
+             id="circle2738" />
+          <circle
+             class="outlier"
+             r="3"
+             style="fill:#1f77b4;fill-opacity:0.4;stroke:#1f77b4;stroke-width:1px"
+             cx="456.39749"
+             cy="15"
+             id="circle2740" />
+        </g>
+      </g>
+    </g>
+    <g
+       class="tooltipWrapper"
+       style="display:none"
+       id="g2752">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.8;stroke:#808080"
+         id="rect2748"
+         width="0"
+         height="0"
+         x="0"
+         y="0" />
+      <text
+         class="tooltip"
+         text-anchor="middle"
+         style="opacity:1"
+         id="text2750" />
+    </g>
+    <g
+       class="labelsWrapper"
+       id="g2762">
+      <g
+         class="yLabel"
+         id="g2760">
+        <rect
+           class="yTrigger"
+           style="fill:#1f77b4;fill-opacity:1;stroke:#1f77b4"
+           x="-7"
+           y="4.924068"
+           width="7"
+           height="20.151863"
+           id="rect2754" />
+        <rect
+           class="yLabel"
+           style="display:none;fill:#1f77b4;fill-opacity:0.35"
+           x="0"
+           y="4.924068"
+           width="79.373413"
+           height="21.151863"
+           id="rect2756" />
+        <text
+           class="yLabel"
+           text-anchor="left"
+           dominant-baseline="central"
+           style="font-size:12px;display:none;opacity:1"
+           x="5"
+           y="15"
+           id="text2758">htb2mCherry</text>
+      </g>
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:100%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="239.16862"
+     y="220.13019"
+     id="text3781"><tspan
+       sodipodi:role="line"
+       id="tspan3779"
+       x="239.16862"
+       y="220.13019"
+       style="font-size:13.3333px">Estimated period (h, scaled)</tspan></text>
+</svg>
