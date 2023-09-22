@@ -1,6 +1,8 @@
-#+title: Bio Dare2 Is26643
+#+title: Bio Dare2
 
 * Period estimation
+Data: IS26643
+
 Number of time series included in summary statistics
 (the rest were labelled 'needs attention', without further explanation, and thrown out)
 Total time series = 190
@@ -11,3 +13,11 @@ Total time series = 190
 | FFT NLLS |     20 |       9 |
 | MESA     |    169 |     177 |
 | LSP      |    183 |     185 |
+
+* Rhythmicity detection
+Data: IS20016
+
+Method: Defaults (BD2 eJTK; waveforms: EJTK_CLASSIC)
+
+- BY4741: AUROC = 0.717
+- zwf1: AUROC = 0.696
