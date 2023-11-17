@@ -59,7 +59,10 @@ timeseries_df = pd.read_csv(timeseries1_filepath, index_col=[0, 1, 2])
 labels_df = pd.read_csv(labels1_filepath, index_col=[0, 1, 2])
 
 timeseries_dropna = timeseries_df.dropna()
-labels_df = labels_df == 1
+# Bodge: For display purposes
+labels_df = labels_df.replace(0, "Negative")
+labels_df = labels_df.replace(1, "Positive")
+# labels_df = labels_df == 1
 
 # Load periodograms
 if data_options["load_pdgram"]:
@@ -93,23 +96,25 @@ for power_spectrum_idx in range(len(power_df)):
     local_minima.append(len(local_min_list))
 
 combined_df = pd.concat([l, order_df, t], axis=1)
-combined_df.columns = ["manual_score", "order", "JiaGrima2020_type"]
-combined_df["local_maxima"] = local_maxima
+combined_df.columns = ["Human-defined label", "Order", "Type"]
+combined_df["Number of maxima"] = local_maxima
 
 if plot_choices["order"]:
     fig_order, ax_order = plt.subplots()
     sns.boxplot(
         data=combined_df,
-        x="manual_score",
-        y="order",
-        hue="JiaGrima2020_type",
+        x="Human-defined label",
+        y="Order",
+        hue="Type",
         ax=ax_order,
     )
 
 if plot_choices["maxima"]:
     fig_maxima, ax_maxima = plt.subplots()
     ct = pd.crosstab(
-        combined_df["manual_score"], combined_df["local_maxima"], normalize="index"
+        combined_df["Human-defined label"],
+        combined_df["Number of maxima"],
+        normalize="index",
     )
     ct.plot(kind="bar", stacked=True, ax=ax_maxima)
 
