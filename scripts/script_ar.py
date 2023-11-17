@@ -110,7 +110,7 @@ if plot_choices["order"]:
     )
 
 if plot_choices["maxima"]:
-    fig_maxima, ax_maxima = plt.subplots()
+    fig_maxima, ax_maxima = plt.subplots(figsize=(5, 5))
     ct = pd.crosstab(
         combined_df["Human-defined label"],
         combined_df["Number of maxima"],
@@ -121,6 +121,15 @@ if plot_choices["maxima"]:
     ax_maxima.set_xticklabels(ax_maxima.xaxis.get_majorticklabels(), rotation=45)
     ax_maxima.set_xlabel("Human-defined label")
     ax_maxima.set_ylabel("Percent")
+    # Shink axis and put legend to the right
+    box = ax_maxima.get_position()
+    ax_maxima.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+    ax_maxima.legend(
+        loc="center left",
+        bbox_to_anchor=(1, 0.5),
+        title="Number of maxima\nin power spectrum",
+    )
+
 
 # Save figures
 pdf_filename = "../reports/ar_" + data_options["experimentID"] + ".pdf"
