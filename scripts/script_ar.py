@@ -116,7 +116,11 @@ if plot_choices["maxima"]:
         combined_df["Number of maxima"],
         normalize="index",
     )
-    ct.plot(kind="bar", stacked=True, ax=ax_maxima)
+    ct *= 100
+    ct.plot(kind="bar", stacked=True, colormap="copper_r", ax=ax_maxima)
+    ax_maxima.set_xticklabels(ax_maxima.xaxis.get_majorticklabels(), rotation=45)
+    ax_maxima.set_xlabel("Human-defined label")
+    ax_maxima.set_ylabel("Percent")
 
 # Save figures
 pdf_filename = "../reports/ar_" + data_options["experimentID"] + ".pdf"
