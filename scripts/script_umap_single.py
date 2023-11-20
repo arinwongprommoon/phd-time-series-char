@@ -18,6 +18,8 @@ data_options = {
     "group1": "zwf1egf",
     # second group
     "group2": "by4741",
+    # include only first half of the time series
+    "only_first_half": True,
 }
 
 model_options = {
@@ -63,6 +65,13 @@ timeseries2_df, labels2_df = get_timeseries_labels(group2_name)
 # Join dataframes
 timeseries_df = pd.concat([timeseries1_df, timeseries2_df])
 labels_df = pd.concat([labels1_df, labels2_df])
+
+# Include only first half of time series
+# (For thesis corrections -- see if the groupings are because of the properties
+# of time series or because of UMAP algorithm.)
+if data_options["only_first_half"]:
+    num_timepoints = timeseries_df.shape[1]
+    timeseries_df = timeseries_df.iloc[:, : (num_timepoints // 2)]
 
 # Featurise
 features_df = catch22.as_function(timeseries_df)
