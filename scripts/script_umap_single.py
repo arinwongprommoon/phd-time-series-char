@@ -42,6 +42,8 @@ plot_choices = {
     "combined": True,
     # Sample points from bounding boxes
     "samples": True,
+    # RNG seed
+    "samples/seed": 69,
     # Number of samples
     "samples/num": 3,
     # Bounding box 1 -- lower left co-ordinate and upper right co-ordinate
@@ -188,6 +190,7 @@ if plot_choices["samples"]:
         in_bbox_nosc_mask = np.logical_and(in_bbox_mask, nosc_mask)
         in_bbox_nosc_idx = np.array(range(len(embedding)))[in_bbox_nosc_mask]
         # Sample, randomly
+        np.random.seed(plot_choices["samples/seed"])
         sample_idx = in_bbox_nosc_idx[
             np.random.choice(
                 len(in_bbox_nosc_idx), plot_choices["samples/num"], replace=False
