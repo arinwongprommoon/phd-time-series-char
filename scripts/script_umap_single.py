@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import umap
@@ -38,6 +40,18 @@ plot_choices = {
     "score": True,
     # Combining strains and scores
     "combined": True,
+    # Sample points from bounding boxes
+    "samples": True,
+    # RNG seed
+    "samples/seed": 69,
+    # Number of samples
+    "samples/num": 3,
+    # Bounding box 1 -- lower left co-ordinate and upper right co-ordinate
+    "samples/bbox1": (np.array([-3, 0]), np.array([2, 4])),
+    # Bounding box 2
+    "samples/bbox2": (np.array([4, -5]), np.array([10, 1])),
+    # Bounding box 3
+    "samples/bbox3": (np.array([3, 1]), np.array([15, 12])),
 }
 
 data_dir = "../data/raw/"
@@ -159,6 +173,53 @@ if plot_choices["combined"]:
         palette=label_palette_map,
         ax=ax_combined,
     )
+
+if plot_choices["samples"]:
+    # TODO: functionalise and repeat for other bounding boxes
+    # Bounding box 1
+    for bbox_idx in range(3):
+        # https://stackoverflow.com/a/33051576
+        bbox_key = f"samples/bbox{bbox_idx + 1}"
+        lower_left = plot_choices[bbox_key][0]
+        upper_right = plot_choices[bbox_key][1]
+        in_bbox_mask = np.all(
+            np.logical_and(lower_left <= embedding, embedding <= upper_right), axis=1
+        )
+        nosc_mask = np.array(scores_list) == "Non-oscillatory"
+        # Select only the ones that are non-oscillatory
+        in_bbox_nosc_mask = np.logical_and(in_bbox_mask, nosc_mask)
+        in_bbox_nosc_idx = np.array(range(len(embedding)))[in_bbox_nosc_mask]
+        # Sample, randomly
+        np.random.seed(plot_choices["samples/seed"])
+        sample_idx = in_bbox_nosc_idx[
+            np.random.choice(
+                len(in_bbox_nosc_idx), plot_choices["samples/num"], replace=False
+            )
+        ]
+        # Convert to cell ID -- this is needed because NaNs were not removed from
+        # timeseries_df
+        sample_multi_idx = features_df.iloc[sample_idx].index
+        sample_timeseries_df = timeseries_df.loc[sample_multi_idx]
+
+        # Draw samples
+        fig, axs = plt.subplots(
+            nrows=plot_choices["samples/num"], sharex=True, figsize=(6, 6)
+        )
+        for sample_idx, ax in enumerate(axs):
+            ax.plot(sample_timeseries_df.iloc[sample_idx])
+            ax.set_title(f"Region {bbox_idx+1}, sample {sample_idx+1}")
+            ax.xaxis.set_major_locator(ticker.MultipleLocator(20))
+        # Create common axis labels
+        fig.add_subplot(111, frameon=False)
+        plt.tick_params(
+            labelcolor="none", top=False, bottom=False, left=False, right=False
+        )
+        plt.grid(False)
+        plt.xlabel("Time (min)")
+        plt.ylabel("Flavin fluorescence, normalised (AU)")
+
+    # Bounding box 2
+    # Bounding box 3
 
 # Save figures
 pdf_filename = "../reports/umap_single_" + data_options["experimentID"] + ".pdf"
