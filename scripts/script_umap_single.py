@@ -184,9 +184,15 @@ if plot_choices["samples"]:
     sample_idx = in_bbox_idx[
         np.random.choice(len(in_bbox_idx), plot_choices["samples/num"], replace=False)
     ]
-    print(sample_idx)
+    # Convert to cell ID -- this is needed because NaNs were not removed from
+    # timeseries_df
+    sample_multi_idx = features_df.iloc[sample_idx].index
+    sample_timeseries_df = timeseries_df.loc[sample_multi_idx]
+    print(sample_timeseries_df)
     # Bounding box 2
     # Bounding box 3
+
+# breakpoint()
 
 
 # Save figures
