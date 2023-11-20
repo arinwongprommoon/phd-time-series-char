@@ -207,7 +207,7 @@ if plot_choices["samples"]:
         )
         for sample_idx, ax in enumerate(axs):
             ax.plot(sample_timeseries_df.iloc[sample_idx])
-            ax.set_title(f"bbox{bbox_idx+1}, sample {sample_idx+1}")
+            ax.set_title(f"Region {bbox_idx+1}, sample {sample_idx+1}")
             ax.xaxis.set_major_locator(ticker.MultipleLocator(20))
         # Create common axis labels
         fig.add_subplot(111, frameon=False)
