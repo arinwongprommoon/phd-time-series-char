@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -188,12 +189,24 @@ if plot_choices["samples"]:
     # timeseries_df
     sample_multi_idx = features_df.iloc[sample_idx].index
     sample_timeseries_df = timeseries_df.loc[sample_multi_idx]
-    print(sample_timeseries_df)
+
+    # Draw samples
+    fig, axs = plt.subplots(
+        nrows=plot_choices["samples/num"], sharex=True, figsize=(6, 6)
+    )
+    for sample_idx, ax in enumerate(axs):
+        ax.plot(sample_timeseries_df.iloc[sample_idx])
+        ax.set_title(f"bbox1, sample {sample_idx+1}")
+        ax.xaxis.set_major_locator(ticker.MultipleLocator(20))
+    # Create common axis labels
+    fig.add_subplot(111, frameon=False)
+    plt.tick_params(labelcolor="none", top=False, bottom=False, left=False, right=False)
+    plt.grid(False)
+    plt.xlabel("Time (min)")
+    plt.ylabel("Flavin fluorescence, normalised (AU)")
+
     # Bounding box 2
     # Bounding box 3
-
-# breakpoint()
-
 
 # Save figures
 pdf_filename = "../reports/umap_single_" + data_options["experimentID"] + ".pdf"
