@@ -41,6 +41,8 @@ plot_choices = {
     "combined": True,
     # Sample points from bounding boxes
     "samples": True,
+    # Number of samples
+    "samples/num": 3,
     # Bounding box 1 -- lower left co-ordinate and upper right co-ordinate
     "samples/bbox1": (np.array([-3, 0]), np.array([2, 4])),
     # Bounding box 2
@@ -178,8 +180,11 @@ if plot_choices["samples"]:
     in_bbox_mask = np.all(
         np.logical_and(lower_left <= embedding, embedding <= upper_right), axis=1
     )
-    in_bbox_embedding = embedding[in_bbox_mask]
-    print(in_bbox_embedding)
+    in_bbox_idx = np.array(range(len(embedding)))[in_bbox_mask]
+    sample_idx = in_bbox_idx[
+        np.random.choice(len(in_bbox_idx), plot_choices["samples/num"], replace=False)
+    ]
+    print(sample_idx)
     # Bounding box 2
     # Bounding box 3
 
