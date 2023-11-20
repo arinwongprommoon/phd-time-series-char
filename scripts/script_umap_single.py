@@ -19,7 +19,7 @@ data_options = {
     # second group
     "group2": "by4741",
     # include only first half of the time series
-    "only_first_half": True,
+    "only_first_half": False,
 }
 
 model_options = {
