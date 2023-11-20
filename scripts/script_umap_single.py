@@ -181,9 +181,15 @@ if plot_choices["samples"]:
     in_bbox_mask = np.all(
         np.logical_and(lower_left <= embedding, embedding <= upper_right), axis=1
     )
-    in_bbox_idx = np.array(range(len(embedding)))[in_bbox_mask]
-    sample_idx = in_bbox_idx[
-        np.random.choice(len(in_bbox_idx), plot_choices["samples/num"], replace=False)
+    nosc_mask = np.array(scores_list) == "Non-oscillatory"
+    # Select only the ones that are non-oscillatory
+    in_bbox_nosc_mask = np.logical_and(in_bbox_mask, nosc_mask)
+    in_bbox_nosc_idx = np.array(range(len(embedding)))[in_bbox_nosc_mask]
+    # Sample, randomly
+    sample_idx = in_bbox_nosc_idx[
+        np.random.choice(
+            len(in_bbox_nosc_idx), plot_choices["samples/num"], replace=False
+        )
     ]
     # Convert to cell ID -- this is needed because NaNs were not removed from
     # timeseries_df
