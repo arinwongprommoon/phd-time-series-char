@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import umap
@@ -38,6 +39,14 @@ plot_choices = {
     "score": True,
     # Combining strains and scores
     "combined": True,
+    # Sample points from bounding boxes
+    "samples": True,
+    # Bounding box 1 -- lower left co-ordinate and upper right co-ordinate
+    "samples/bbox1": (np.array([-3, 0]), np.array([2, 4])),
+    # Bounding box 2
+    "samples/bbox2": (np.array([-3, 0]), np.array([2, 4])),
+    # Bounding box 2
+    "samples/bbox3": (np.array([-3, 0]), np.array([2, 4])),
 }
 
 data_dir = "../data/raw/"
@@ -159,6 +168,21 @@ if plot_choices["combined"]:
         palette=label_palette_map,
         ax=ax_combined,
     )
+
+if plot_choices["samples"]:
+    # https://stackoverflow.com/a/33051576
+    # TODO: functionalise and repeat for other bounding boxes
+    # Bounding box 1
+    lower_left = plot_choices["samples/bbox1"][0]
+    upper_right = plot_choices["samples/bbox1"][1]
+    in_bbox_mask = np.all(
+        np.logical_and(lower_left <= embedding, embedding <= upper_right), axis=1
+    )
+    in_bbox_embedding = embedding[in_bbox_mask]
+    print(in_bbox_embedding)
+    # Bounding box 2
+    # Bounding box 3
+
 
 # Save figures
 pdf_filename = "../reports/umap_single_" + data_options["experimentID"] + ".pdf"
