@@ -636,7 +636,7 @@ htb2mCherry_005,33,2,0
 htb2mCherry_005,34,1,0
 htb2mCherry_005,34,2,0
 htb2mCherry_005,35,2,0
-htb2mCherry_005,36,1,
+htb2mCherry_005,36,1,0
 htb2mCherry_005,36,2,0
 htb2mCherry_005,36,9,0
 htb2mCherry_005,36,10,0
@@ -1065,7 +1065,7 @@ htb2mCherry_007,83,8,0
 htb2mCherry_007,84,2,0
 htb2mCherry_007,86,1,0
 htb2mCherry_007,86,2,0
-htb2mCherry_007,86,3,
+htb2mCherry_007,86,3,0
 htb2mCherry_007,86,4,0
 htb2mCherry_007,87,4,0
 htb2mCherry_007,87,11,0
@@ -1176,7 +1176,7 @@ htb2mCherry_008,57,2,0
 htb2mCherry_008,58,1,0
 htb2mCherry_008,58,2,0
 htb2mCherry_008,59,1,0
-htb2mCherry_008,59,2,
+htb2mCherry_008,59,2,0
 htb2mCherry_008,60,1,0
 htb2mCherry_008,60,2,0
 htb2mCherry_008,61,1,0
@@ -1300,7 +1300,7 @@ htb2mCherry_009,39,2,0
 htb2mCherry_009,39,3,0
 htb2mCherry_009,40,1,0
 htb2mCherry_009,41,1,0
-htb2mCherry_009,41,2,
+htb2mCherry_009,41,2,0
 htb2mCherry_009,41,3,0
 htb2mCherry_009,42,1,0
 htb2mCherry_009,42,2,0
@@ -1399,7 +1399,7 @@ htb2mCherry_009,93,13,0
 htb2mCherry_009,93,15,0
 htb2mCherry_009,94,1,0
 htb2mCherry_009,94,2,0
-htb2mCherry_009,94,3,
+htb2mCherry_009,94,3,0
 htb2mCherry_009,95,1,0
 htb2mCherry_009,95,2,0
 htb2mCherry_009,95,3,0
@@ -1782,7 +1782,7 @@ htb2mCherry_011,91,4,0
 htb2mCherry_011,91,6,0
 htb2mCherry_011,92,2,0
 htb2mCherry_011,92,4,0
-htb2mCherry_011,93,1,
+htb2mCherry_011,93,1,0
 htb2mCherry_011,93,5,1
 htb2mCherry_011,94,5,0
 htb2mCherry_011,94,6,0
