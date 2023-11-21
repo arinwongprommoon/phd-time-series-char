@@ -1,4 +1,4 @@
-position,trap,cell_label,0
+position,trap,cell_label,score
 htb2mCherry_012,1,1,1
 htb2mCherry_012,2,2,1
 htb2mCherry_012,3,2,0
