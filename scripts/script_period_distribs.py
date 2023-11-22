@@ -5,7 +5,7 @@ import pandas as pd
 
 from postprocessor.core.multisignal.crosscorr import crosscorr, crosscorrParameters
 from postprocessor.core.processes.findpeaks import findpeaks, findpeaksParameters
-from scipy.stats import sem
+from scipy.stats import sem, ttest_ind
 
 data_options = {
     # Format: XXNNNNN_SSSSS
@@ -84,6 +84,8 @@ def estimate_periods(group_name):
     return num, periods_min
 
 
+num_ref, periods_min_ref = estimate_periods(group_name=data_options["ref_group"])
+
 for group_name in data_options["list_groups"]:
     num, periods_min = estimate_periods(group_name=group_name)
 
@@ -96,9 +98,12 @@ for group_name in data_options["list_groups"]:
     median = np.median(periods_min)
     q25, q75 = np.percentile(periods_min, [25, 75])
 
+    t, p = ttest_ind(periods_min_ref, periods_min)
+
     # Print statistics
     print(f"Group: {group_name}")
     print(f"n = {num}; n(osc) = {num_osc} ({100*num_osc/num:.2f}%).")
     print(f"mean = {mean:.2f}; SEM = {std_err_mean:.2f}.")
     print(f"median = {median:.2f}; IQR = {q25:.2f}--{q75:.2f} (diff = {q75-q25:.2f}).")
+    print(f"t = {t:.2f}; p = {p}")
     print("\n")
