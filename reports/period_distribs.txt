@@ -1,0 +1,66 @@
+Group: is26643_htb2mCherry
+n = 190; n(osc) = 166 (87.37%).
+mean = 115.69; SEM = 3.59.
+median = 100.00; IQR = 90.00--113.75 (diff = 23.75).
+
+
+Group: is27917_htb2mCherry
+n = 52; n(osc) = 42 (80.77%).
+mean = 111.90; SEM = 7.93.
+median = 90.00; IQR = 80.00--111.25 (diff = 31.25).
+
+
+Group: is19972_htb2mCherry
+n = 212; n(osc) = 26 (12.26%).
+mean = 117.31; SEM = 10.24.
+median = 100.00; IQR = 78.75--147.50 (diff = 68.75).
+
+
+Group: st00491_by4741
+n = 298; n(osc) = 246 (82.55%).
+mean = 92.40; SEM = 2.63.
+median = 80.00; IQR = 75.00--85.00 (diff = 10.00).
+
+
+Group: is20212_cenpkkoetter
+n = 29; n(osc) = 6 (20.69%).
+mean = 118.33; SEM = 24.65.
+median = 95.00; IQR = 91.25--106.25 (diff = 15.00).
+
+
+Group: is31594_htb2mCherry
+n = 360; n(osc) = 152 (42.22%).
+mean = 247.47; SEM = 6.19.
+median = 235.00; IQR = 185.00--301.25 (diff = 116.25).
+
+
+Group: is31492_htb2mCherry
+n = 1520; n(osc) = 183 (12.04%).
+mean = 193.55; SEM = 7.56.
+median = 155.00; IQR = 130.00--242.50 (diff = 112.50).
+
+
+Group: st00613_htb2mCherry
+n = 511; n(osc) = 206 (40.31%).
+mean = 132.82; SEM = 2.82.
+median = 125.00; IQR = 105.00--150.00 (diff = 45.00).
+
+
+Group: st00409_zwf1egf
+n = 112; n(osc) = 63 (56.25%).
+mean = 192.78; SEM = 7.74.
+median = 180.00; IQR = 155.00--212.50 (diff = 57.50).
+
+
+Group: st01649_tsa1tsa2morgan
+n = 212; n(osc) = 67 (31.60%).
+mean = 157.69; SEM = 7.65.
+median = 140.00; IQR = 115.00--200.00 (diff = 85.00).
+
+
+Group: is20016_zwf1egf
+n = 425; n(osc) = 224 (52.71%).
+mean = 139.80; SEM = 3.46.
+median = 120.00; IQR = 100.00--175.00 (diff = 75.00).
+
+
