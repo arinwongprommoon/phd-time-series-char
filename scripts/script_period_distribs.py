@@ -19,7 +19,7 @@ data_options = {
         "is19972_htb2mCherry",
         "st00491_by4741",
         "is20212_cenpkkoetter",
-        # "is31594_htb2mCherry",
+        "is31594_htb2mCherry",
         "is31492_htb2mCherry",
         "st00613_htb2mCherry",
         "st00409_zwf1egf",
