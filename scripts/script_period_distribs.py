@@ -72,6 +72,8 @@ for group_name in data_options["list_groups"]:
     )
     periods = acfs_peaks.apply(lambda x: get_first_interval(x), axis=1)
     periods_min = 5 * periods.to_numpy()
+    # Drop NaNs
+    periods_min = periods_min[~np.isnan(periods_min)]
 
     # Compute statistics
     num = timeseries_dropna.shape[0]
