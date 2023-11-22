@@ -13,7 +13,19 @@ data_options = {
     # - X: server abbrevation ('is' or 'st')
     # - N: experiment ID, 5-digit, with leading zeros
     # - S: strain name
-    "list_groups": ["is20016_zwf1egf"],
+    "list_groups": [
+        "is26643_htb2mCherry",
+        "is27917_htb2mCherry",
+        "is19972_htb2mCherry",
+        "st00491_by4741",
+        "is20212_cenpkkoetter",
+        # "is31594_htb2mCherry",
+        "is31492_htb2mCherry",
+        "st00613_htb2mCherry",
+        "st00409_zwf1egf",
+        "st01649_tsa1tsa2morgan",
+        "is20016_zwf1egf",
+    ],
 }
 
 param_options = {
@@ -76,3 +88,4 @@ for group_name in data_options["list_groups"]:
     print(f"n = {num}; n(osc) = {num_osc} ({100*num_osc/num:.2f}%).")
     print(f"mean = {mean:.2f}; SEM = {std_err_mean:.2f}.")
     print(f"median = {median:.2f}; IQR = {q25:.2f}--{q75:.2f} (diff = {q75-q25:.2f}).")
+    print("\n")
